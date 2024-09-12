@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hospital Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="welcome-container">
+  <h1>Welcome to Our Hospital Dashboard</h1>
+  <p>Get insights into patient statistics and health predictions</p>
+  <a href="/predict-form">Check Length of Stay</a>
+  <a href="/xray">Upload X-ray for Prediction</a> <!-- Add this for X-ray upload -->
+</div>
+
+</body>
+</html>

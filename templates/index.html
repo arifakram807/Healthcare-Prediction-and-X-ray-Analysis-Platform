@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Length of Stay Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h1>Predict Length of Stay</h1>
+    <form action="/predict" method="POST">
+        <!-- Row for Readmission Count -->
+        <div class="form-row">
+            <label for="rcount">Readmission Count:</label>
+            <input type="number" id="rcount" name="rcount" step="1" placeholder="Enter readmission count" required>
+        </div>
+
+        <!-- Row for BMI -->
+        <div class="form-row">
+            <label for="bmi">BMI:</label>
+            <input type="number" id="bmi" name="bmi" step="0.000001" placeholder="Enter BMI" required>
+        </div>
+
+        <!-- Row for Glucose -->
+        <div class="form-row">
+            <label for="glucose">Glucose:</label>
+            <input type="number" id="glucose" name="glucose" step="0.000001" placeholder="Enter glucose level" required>
+        </div>
+
+        <!-- Row for Blood Urea Nitrogen -->
+        <div class="form-row">
+            <label for="bloodureanitro">Blood Urea Nitrogen:</label>
+            <input type="number" id="bloodureanitro" name="bloodureanitro" step="0.000001" placeholder="Enter blood urea nitrogen level" required>
+        </div>
+
+        <!-- Row for Creatinine -->
+        <div class="form-row">
+            <label for="creatinine">Creatinine:</label>
+            <input type="number" id="creatinine" name="creatinine" step="0.000001" placeholder="Enter creatinine level" required>
+        </div>
+
+        <div class="form-row">
+        <label for="neutrophils">Neutrophils:</label>
+        <input type="number" id="neutrophils" name="neutrophils" step="0.000001" placeholder="Enter eutrophils level" required>
+        </div>
+
+
+        <!-- Row for Hematocrit -->
+        <div class="form-row">
+            <label for="hematocrit">Hematocrit:</label>
+            <input type="number" id="hematocrit" name="hematocrit" step="0.000001" placeholder="Enter hematocrit level" required>
+        </div>
+
+        <!-- Row for Sodium -->
+        <div class="form-row">
+            <label for="sodium">Sodium:</label>
+            <input type="number" id="sodium" name="sodium" step="0.000001" placeholder="Enter sodium level" required>
+        </div>
+
+        <!-- Row for Pulse -->
+        <div class="form-row">
+            <label for="pulse">Pulse:</label>
+            <input type="number" id="pulse" name="pulse" placeholder="Enter pulse rate" required>
+        </div>
+
+        <!-- Row for Respiration -->
+        <div class="form-row">
+            <label for="respiration">Respiration:</label>
+            <input type="number" id="respiration" name="respiration" step="0.000001" placeholder="Enter respiration rate" required>
+        </div>
+
+        <!-- Health Conditions Section -->
+        <div class="form-section">
+            <label for="health_conditions">Health Conditions:</label>
+            <div class="health-conditions">
+                <input type="checkbox" name="dialysisrenalendstage" value="1"> Dialysis Renal Endstage<br>
+                <input type="checkbox" name="asthma" value="1"> Asthma<br>
+                <input type="checkbox" name="irondef" value="1"> Iron Deficiency<br>
+                <input type="checkbox" name="pneum" value="1"> Pneumonia<br>
+                <input type="checkbox" name="substancedependence" value="1"> Substance Dependence<br>
+                <input type="checkbox" name="psychologicaldisordermajor" value="1"> Psychological Disorder Major<br>
+                <input type="checkbox" name="depress" value="1"> Depression<br>
+                <input type="checkbox" name="psychother" value="1"> Psychological Therapy<br>
+                <input type="checkbox" name="fibrosisandother" value="1"> Fibrosis and Other<br>
+                <input type="checkbox" name="malnutrition" value="1"> Malnutrition<br>
+                <input type="checkbox" name="hemo" value="1"> Hemoglobin Disorder<br>
+            </div>
+        </div>
+
+        <!-- Gender Section -->
+        <div class="form-section">
+            <label for="gender">Gender:</label>
+            <div>
+                <input type="radio" id="male" name="gender_M" value="1" required> Male
+                <input type="radio" id="female" name="gender_M" value="0" required> Female
+            </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="form-row">
+            <input type="submit" value="Predict">
+        </div>
+    </form>
+</div>
+</body>
+</html>

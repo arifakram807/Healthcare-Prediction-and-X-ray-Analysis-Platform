@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X-ray Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="result-container">
+    <h1>X-ray Prediction Result</h1>
+    <img src="{{ url_for('uploaded_file', filename=filename) }}" alt="X-ray Image" class="xray-image">
+    <h2>Predicted Conditions:</h2>
+    <ul class="conditions-list">
+        {% for disease in predictions %}
+        <li class="predicted-condition">{{ disease }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/" class="btn">Go Back to Home</a>
+</div>
+</body>
+</html>

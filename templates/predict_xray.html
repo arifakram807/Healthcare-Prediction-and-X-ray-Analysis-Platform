@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload X-ray Image</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h1>Upload Chest X-ray for Prediction</h1>
+    <form action="/predict_xray" method="POST" enctype="multipart/form-data">
+        <div class="form-row">
+            <label for="xrayImage">Upload X-ray Image:</label>
+            <input type="file" id="xrayImage" name="xrayImage" accept="image/*" required>
+        </div>
+        <div class="form-row">
+            <input type="submit" value="Predict">
+        </div>
+    </form>
+</div>
+</body>
+</html>

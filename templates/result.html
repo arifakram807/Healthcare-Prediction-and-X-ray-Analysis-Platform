@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="result-container">
+    <h1>Predicted Length of Stay</h1>
+    <p>The predicted length of stay is: <strong>{{ predicted_length_of_stay }} days</strong></p>
+    <a href="/" class="btn">Go Back to Home</a>
+    <a href="/predict-form" class="btn">Predict Again</a>
+</div>
+</body>
+</html>
